@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="stylesheet" src="css/index.css"> <!--link of external css file -->
+        <script type="text/javascript" src="js/index.js"></script> <!--link of external JS file -->
+    </head>
+    <body style="text-align: center;">
+        <button onclick="viewDate()">View Date</button> <!--Call a function from external JS named as viewDate()-->
+    </body>
+    <script>
+        var p1, p2;
+        function calculate(p1,p2){  //calculate function declare with two parameter
+            return(p1*p2)
+        }
+        var r = function result(){
+           var result = calculate(10,12); //call calculate function
+        //    document.write(result);
+           return(result);
+        }
+        document.write(r()); //120
+        // window.onload = r();
+    </script>
+</html>
