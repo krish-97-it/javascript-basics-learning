@@ -2,14 +2,15 @@
 <html>
     <head>
         <link type="stylesheet" src="css/index.css"> <!--link of external css file -->
-        <script type="text/javascript" src="js/index.js"></script> <!--link of external JS file -->
+        <link rel="icon" href="https://cdn1.byjus.com/blog/2018/03/15174826/favicon.png" sizes="32x32">
     </head>
     <body style="text-align: center;">
         <h1>Welcome To JavaScript Basics</h1>
         <p id="helloWorld"></p>
-        <button onclick="viewDate()">View Date</button> <!--Call a function from external JS named as viewDate()-->
+        <button id="viewbtn">View Date</button> <!--Call a function from external JS named as viewDate()-->
     </body>
     <script>
         document.getElementById("helloWorld").innerHTML = "Hello!!"; //Change the content of html from JavaScript>
     </script>
 </html>
+<script type="text/javascript" src="js/index.js"></script> <!--link of external JS file -->
