@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="stylesheet" src="css/index.css"> <!--link of external css file -->
+        <script type="module" src="js/main.js"></script> <!--link of external JS module -->
+        <link rel="icon" href="https://cdn1.byjus.com/blog/2018/03/15174826/favicon.png" sizes="32x32">
+    </head>
+    <body style="text-align: center;">
+        <h1 id="helloWorld"></h1>
+        <p id="bodytext"></p>
+        <button id="viewdate" onclick="displaydate()">View Date</button><br> <!--Call a function from external JS named as viewDate()-->
+    </body>
+    <script>
+        document.write("Hello!!<br>"); //Change the content of html from JavaScript>
+        displaydate = () =>{
+             console.log(Date());
+        }
+    </script>
+</html>
