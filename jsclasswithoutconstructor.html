@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="stylesheet" src="css/index.css"> <!--link of external css file -->
+        <script type="text/javascript" src="js/index.js"></script> <!--link of external JS file -->
+    </head>
+    <body style="text-align: center;">
+        <h1>Welcome To JavaScript Basics</h1>
+        <p id="demo"></p>
+    </body>
+    <script>
+        class sname{
+            displayFullName = (fname,lname) =>{
+                var firstName   =   fname;
+                var lastName    =   lname;
+                return("<br>"+firstName+" "+lastName+"<br>");
+            }
+        }
+        class result extends sname{
+            total_Sub = 7   //without constructor variable declare
+            calculate = (num) =>{
+                return("got marks: "+(num/7)+"<br>");
+            }
+        }
+        let student1 = new result();
+        let student2 = new result();
+        var studentdata = [
+                        [student1.displayFullName("Krishnendu","Nandy"),student1.calculate(563)],
+                        [student2.displayFullName("Rahul","Das"),student2.calculate(583)]
+                    ]
+        for(var i in studentdata){
+            document.write(studentdata[i]);
+        }
+        // document.getElementById("helloWorld").innerHTML = "Hello!!"; //Change the content of html from JavaScript>
+    </script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="stylesheet" src="css/index.css"> <!--link of external css file -->
+        <script type="text/javascript" src="js/index.js"></script> <!--link of external JS file -->
+    </head>
+    <body style="text-align: center;">
+        <p id="demo"></p>
+    </body>
+    <script>
+
+        class democlass{    //parent class
+            constructor(name){
+                this.name = name;   //inital name property of democlass
+            }
+        }
+        class testclass extends democlass{      //child class
+            constructor(sname, num){
+                super(sname);   //accessing the parent class property
+                this.n = num;   //inital property of testclass
+            }
+            displayresult  = () =>{
+                return(this.name);  //return the name of the student
+            }
+            calculator(p){
+                let k = this.n;     //class methods with parameter 
+                return(p/k);
+            }
+        }
+
+        let obj1     = new testclass("Krish", 7);   //object creation
+        var result   = obj1.calculator(563);
+        var d        = obj1.displayresult();
+
+        document.getElementById("demo").innerHTML = "name: "+ d +" and percentage marks: "+result; //Change the content of html from JavaScript>
+    </script>
+</html>

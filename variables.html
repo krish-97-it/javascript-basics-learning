@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="stylesheet" src="css/index.css"> <!--link of external css file -->
+        <script type="text/javascript" src="js/index.js"></script> <!--link of external JS file -->
+    </head>
+    <body style="text-align: center;">
+        <p id="test"></p>
+    </body>
+    <script>
+
+        var x = 5;
+        let y = 6;
+        // let y = 10;	Uncaught SyntaxError: Identifier 'y' has already been declared
+        const z = 100;
+        {
+            let y = 12; //as inside block that why no error comming in this case
+            x = 8;
+            // z= 200; Uncaught Typeerror: cant do change the value of constant variable
+            document.write("y is declared with inside block- ",y); //12
+            document.write("<br>",x,"<br>"); //8
+        }
+        document.write("let has block scope- ",y+"<br>");  //6  - 'let and const' has block scope but var dont have 
+        document.write("var dont have blockscope- ",x,"<br>");  //8
+
+        var global_var = 6; //Global variables
+        var t = 0;
+        var res = function Variables(){  //function block
+            var local_var  = 5; //local variables
+            undeclared_var = 9; //undeclared variables
+            t = global_var + local_var + undeclared_var;
+            ele = document.querySelector("#test");
+            ele.innerHTML = t;
+            return(t);
+        }
+        // document.write(local_var); Uncaught ReferenceError: local_var is not defined
+        document.write("Local variable- ",t,"<br>"); //0 any variable declared inside function is local variables it cant be access from outside
+        window.onload = res();
+    </script>
+</html>
+
+<!-- 
+    var has no block scope except inside some function block
+    let has block scope and once declare it cant be declared again but its value can be changed
+    const has block scope and neither declare not assigning new value is possible again and again
+    Local variable can be accessed llocally inside a function block
+    global variable can be accessed any where.
+-->

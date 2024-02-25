@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="stylesheet" src="css/index.css"> <!--link of external css file -->
+        <script type="text/javascript" src="js/index.js"></script> <!--link of external JS file -->
+    </head>
+    <body style="text-align: center;">
+        <p id="demo"></p>
+    </body>
+    <script>
+        var n;
+        let obj1 = {    //object
+            name: "krish",
+            roll: "2"
+        }
+        for(n in obj1){  //for..in loop
+            document.write(n," = ",obj1[n],"<br>"); //display object property and value
+        }
+
+        document.getElementById("demo").innerHTML = "Hello"; //Change the content of html from JavaScript>
+    </script>
+</html>
